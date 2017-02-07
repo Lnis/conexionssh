@@ -81,7 +81,7 @@ public class Inicio {
   	      {
   	    	sintoma = rset.getString(1);
   	    	System.out.println("Síntomas: "+sintoma);
-  	      }*/
+  	      }
 		}
 		catch(Exception e)
 		{

@@ -1,16 +1,23 @@
 package conexionBD;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PatologíaDTO {
 	private int idPatol;
 	private String nomPatol;
 	private String desPatol;
 	private String trata;
+	private String causa;
+	List<SintomaDTO> listSto = new ArrayList<SintomaDTO>();
 	
-	public PatologíaDTO(int idPatol, String nomPatol, String desPatol, String trata) {
+	public PatologíaDTO(int idPatol, String nomPatol, String desPatol, String trata, String causa, List<SintomaDTO> listSto) {
 		this.idPatol = idPatol;
 		this.nomPatol = nomPatol;
 		this.desPatol = desPatol;
 		this.trata = trata;
+		this.causa = causa;
+		this.listSto = listSto;
 	}
 	public int getIdPatol() {
 		return idPatol;
@@ -35,6 +42,18 @@ public class PatologíaDTO {
 	}
 	public void setTrata(String trata) {
 		this.trata = trata;
+	}
+	public String getCausa() {
+		return causa;
+	}
+	public void setCausa(String causa) {
+		this.causa = causa;
+	}
+	public List<SintomaDTO> getListSto() {
+		return listSto;
+	}
+	public void setListSto(List<SintomaDTO> listSto) {
+		this.listSto = listSto;
 	}
 	
 }
